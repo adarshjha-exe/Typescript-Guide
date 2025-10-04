@@ -1,3 +1,4 @@
+export {};
 class Department {
   name: string;
   private employeeArray: string[] = [];
