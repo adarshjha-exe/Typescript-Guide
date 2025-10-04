@@ -144,3 +144,42 @@
 - If targeting browser code, add `"DOM"` (for interfaces like `document`, `window`, etc.).
 - For Node.js, you might skip `"DOM"` and include only ECMAScript versions.
 - Combine multiple libs for projects needing wider compatibility.
+
+---
+
+# TypeScript Compilation Options & Source Maps
+
+## Key Compilation Options
+
+- **Compiler options in `tsconfig.json`** allow more control over output, strictness, and debugging features.
+- Example options covered:
+  - `"strict"`: Enables all strict type-checking options for safer code.
+  - `"noImplicitAny"`: Flags variables without explicit types (discourages use of `any`).
+  - `"removeComments"`: Removes comments in output JS files.
+  - `"declaration"`: Generates `.d.ts` type definition files alongside JS.
+  - `"outDir"`: Sets output directory for compiled files.
+  - `"rootDir"`: Specifies the root folder of input files.
+
+## Working with Source Maps
+
+- **Purpose:**  
+  Source maps link JavaScript back to original TypeScript, useful for debugging in browsers.
+- **How to enable:**
+
+```
+{
+"compilerOptions": {
+"sourceMap": true
+}
+}
+```
+
+- When enabled, TypeScript creates `.js.map` files next to compiled `.js` files.
+- With proper browser configuration (like in Chrome DevTools), you’ll see and debug your original TypeScript, making development much easier.
+
+## Why Use These Options?
+
+- Better code safety and error checking (`strict`, `noImplicitAny`)
+- Control output structure and organization (`outDir`, `rootDir`)
+- Create type definitions for external consumption (`declaration`)
+- Improve debugging workflow (source maps)
