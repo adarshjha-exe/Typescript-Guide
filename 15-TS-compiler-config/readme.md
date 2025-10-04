@@ -79,3 +79,31 @@
 ## Practical Tips
 
 - By default, `node_modules` is excluded.
+
+---
+
+# Setting Up the Compilation Target to ES5
+
+- **Older browsers** may only support ES5, not ES6/ES2015 features (like arrow functions, `let`/`const`, etc.).
+- You may want to use modern TypeScript features but run your code on environments with different JavaScript support levels.
+
+## How to Set the Target
+
+1. Open your project's `tsconfig.json` file.
+2. Find or add the `target` option in the root configuration object.
+3. Example:
+
+```
+{
+"compilerOptions": {
+"target": "es5"
+}
+}
+```
+
+- This will tell TypeScript to compile your code down to ES5-compatible JavaScript.
+
+- You can set the target to various values, including:
+- `"es5"`
+- `"es6"` or `"es2015"`
+- `"es2016"`, `"es2017"`, etc.
