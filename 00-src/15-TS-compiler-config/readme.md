@@ -183,3 +183,23 @@
 - Control output structure and organization (`outDir`, `rootDir`)
 - Create type definitions for external consumption (`declaration`)
 - Improve debugging workflow (source maps)
+
+---
+
+# Use of `noEmitOnError`
+
+## What Does `noEmitOnError` Do?
+
+- When enabled, TypeScript will **not produce any output files** if there are errors in your `.ts` source files.
+
+```
+{
+"compilerOptions": {
+"noEmitOnError": true
+}
+}
+```
+
+## Conclusion
+
+- It guarantees only valid code is compiled, making builds more reliable and production-safe.
