@@ -1,3 +1,4 @@
+export {};
 let person2 = {
   name: 'Alice',
   hobbies: ['singing', 'cooking'],

@@ -1,3 +1,4 @@
+export {};
 //1.Type Inference
 let myAge = 10; // type inference (TS automatically takes myAge var as Number)
 // myAge="Hello" // Error : Type 'string' is not assignable to type 'number'.

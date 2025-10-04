@@ -1,3 +1,4 @@
+export {};
 /*******  unknown   *****/
 // no error with any
 let userName: any;

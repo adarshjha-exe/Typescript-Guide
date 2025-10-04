@@ -1,3 +1,4 @@
+export {};
 let age: any = 'one two';
 age = 'Twelve';
 age = 12;

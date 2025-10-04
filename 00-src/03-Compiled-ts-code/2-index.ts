@@ -1,3 +1,4 @@
+export {};
 const one = document.querySelector('#one') as HTMLInputElement;
 const two = document.querySelector('#two') as HTMLInputElement;
 const button = document.querySelector('#btn') as HTMLInputElement;

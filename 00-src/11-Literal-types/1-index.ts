@@ -1,3 +1,4 @@
+export {};
 function combine(
   number1: number | string,
   number2: number | boolean | string,
