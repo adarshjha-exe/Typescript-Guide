@@ -1,4 +1,4 @@
-# 15. TypeScript Compiler Using Watch Mode
+# TypeScript Compiler Using Watch Mode
 
 - **Watch Mode:**  
   Automatically recompiles affected files when you save changes—no need to rerun the command manually.
@@ -40,3 +40,42 @@
 | Watch single file (short)    | `tsc filename.ts -w`      |
 | Compile whole project (init) | `tsc --init`              |
 | Watch whole project          | `tsc --watch` or `tsc -w` |
+
+---
+
+# Include and Exclude `.ts` Files with `tsconfig.json`
+
+## Usage of `tsconfig.json`
+
+- **`tsconfig.json`** is created with `tsc --init` and placed at your project root.
+- You use it to configure compiler options and determine which files TypeScript should process.
+
+## `include` Option
+
+- Lists files or folders to be included in the compilation.
+- Example:
+
+```
+{
+"include": ["src/**/", "utils/"]
+}
+```
+
+- This tells TypeScript to compile all `.ts` files in the `src` and `utils` directories.
+
+## `exclude` Option
+
+- Lists files or folders to be excluded from compilation.
+- Example:
+
+```
+{
+"exclude": ["node_modules", "test", "dist"]
+}
+```
+
+- Prevents TypeScript from compiling files in `node_modules`, `test`, and `dist`.
+
+## Practical Tips
+
+- By default, `node_modules` is excluded.
