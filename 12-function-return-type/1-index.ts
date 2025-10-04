@@ -12,7 +12,7 @@ function returnNothing(): void {
 
 returnNothing();
 
-/******** */
+/****Example 2**** */
 
 function returnNothing1(): undefined {
   console.log('Hello world');
