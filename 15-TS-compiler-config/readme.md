@@ -107,3 +107,40 @@
 - `"es5"`
 - `"es6"` or `"es2015"`
 - `"es2016"`, `"es2017"`, etc.
+
+---
+
+# Understanding TypeScript Core Libs in the `tsconfig.json` File
+
+## What Are TypeScript Core Libs?
+
+- **Core libs** are TypeScript definitions for JavaScript environments (e.g., ECMAScript standards, browser APIs).
+- Common lib options:
+  - `"ES5"`, `"ES6"`, `"ES2015"`, `"DOM"`, `"DOM.Iterable"`, `"WebWorker"`, etc.
+- These define the APIs, objects, and methods your TypeScript code recognizes.
+
+## How to Configure `lib` in `tsconfig.json`
+
+- Example setup:
+
+  ```
+  {
+  "compilerOptions": {
+  "lib": ["ES6", "DOM"]
+  }
+  }
+  ```
+
+- Includes ES6 features and DOM types (browser APIs like `document`, `window`).
+
+## Why Use the `lib` Option?
+
+- Controls which JavaScript and browser types are available.
+- Prevents using APIs not available in your runtime environment.
+- Helps with targeting specific platforms (e.g., Node.js vs Browser).
+
+## Practical Tips
+
+- If targeting browser code, add `"DOM"` (for interfaces like `document`, `window`, etc.).
+- For Node.js, you might skip `"DOM"` and include only ECMAScript versions.
+- Combine multiple libs for projects needing wider compatibility.
